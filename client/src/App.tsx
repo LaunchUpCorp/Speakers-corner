@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import RoleAssignmentPage from "./views/RoleAssignmentPage";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route />
         <Route />
         <Route />
-        <Route />
+        <Route path="/role-assignment"
+          element={<RoleAssignmentPage/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
