@@ -19,13 +19,13 @@ const RoleAssignmentPage = () => {
     return (
         <div className='m-8 grid justify-items-center'>
 
-            <div className='m-8'>
+            <div className='my-8'>
                 <Typography variant='h5' className='pb-4'>Each debate room can have 1 moderator and 2 debators</Typography>
                 <Typography>Number of Moderators in the room: {numOfModerators}</Typography>
                 <Typography>Number of Debators in the room: {numOfDebators}</Typography>
             </div>
 
-            <div>
+            <div className='my-8'>
                 <FormControl>
                     <FormLabel>Select your role for this Discussion room.</FormLabel>
                     <RadioGroup
