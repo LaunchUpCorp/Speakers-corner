@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "speakers-corner-blue": "#0077c0",
+      },
+    },
   },
   plugins: [],
 };
