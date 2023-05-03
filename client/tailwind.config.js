@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "speakers-corner-blue": "#0077c0",
+        "sc-blue": "#0077c0",
       },
     },
   },

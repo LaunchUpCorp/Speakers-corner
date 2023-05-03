@@ -11,5 +11,5 @@
 }
 
 header a[class~="active"] {
-  @apply bg-white text-speakers-corner-blue;
+  @apply bg-gray-100 text-sc-blue;
 }
