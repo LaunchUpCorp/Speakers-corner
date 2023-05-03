@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "sc-blue": "#0077c0",
+        "sc-dark-blue": "#00629e",
       },
       keyframes: {
         cardHover: {
