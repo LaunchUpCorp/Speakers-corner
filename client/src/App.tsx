@@ -32,14 +32,8 @@ function App() {
             </main>
           }
         />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
-        <Route />
         <Route path="/role-assignment"
-          element={<RoleAssignmentPage/>}/>
-        <Route path="*" element={<Navigate to="/" />} />
+          element={<RoleAssignmentPage />} />
       </Routes>
     </BrowserRouter>
   );
