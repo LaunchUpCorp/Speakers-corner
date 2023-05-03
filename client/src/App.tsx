@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import RoleAssignmentPage from "./views/RoleAssignmentPage";
+import RoleAssignmentPage from "./pages/RoleAssignmentPage";
 
 function App() {
   return (
