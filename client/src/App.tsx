@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Signup from "./Signup/Signup";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route />
         <Route />
         <Route />
-        <Route />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
