@@ -9,7 +9,7 @@ interface Props {
 function NavItem({ label, path, endPath }: Props) {
   return endPath ? (
     <NavLink
-      className="rounded border border-white  px-2 py-1 hover:bg-white hover:text-sc-blue"
+      className="rounded border border-white px-2 py-1 hover:bg-white hover:text-sc-blue"
       to={path}
       end
     >
@@ -17,7 +17,7 @@ function NavItem({ label, path, endPath }: Props) {
     </NavLink>
   ) : (
     <NavLink
-      className="rounded border border-white  px-2 py-1 hover:bg-white hover:text-sc-blue"
+      className="rounded border border-white px-2 py-1 hover:bg-white hover:text-sc-blue"
       to={path}
     >
       {label}
