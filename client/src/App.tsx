@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
+import RoleAssignmentPage from "./pages/RoleAssignmentPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             </main>
           }
         />
+        <Route path="/role-assignment" element={<RoleAssignmentPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
