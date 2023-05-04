@@ -32,8 +32,7 @@ function App() {
             </main>
           }
         />
-        <Route path="/role-assignment"
-          element={<RoleAssignmentPage />} />
+        <Route path="/role-assignment" element={<RoleAssignmentPage />} />
       </Routes>
     </BrowserRouter>
   );
