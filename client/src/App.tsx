@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Landing from "./pages/Landing";
+import RoleAssignmentPage from "./pages/RoleAssignmentPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             </main>
           }
         />
+        <Route path="/role-assignment" element={<RoleAssignmentPage />} />
       </Routes>
     </BrowserRouter>
   );
