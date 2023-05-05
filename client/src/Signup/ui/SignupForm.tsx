@@ -6,21 +6,8 @@ import {
   Input,
   InputLabel,
 } from "@mui/material";
-
-type ICredentials = {
-  email: string;
-  password: string;
-};
-
-type IErrors = {
-  emailError: { isEmailError: boolean; error: string };
-  passwordError: { isPasswordError: boolean; error: string };
-};
-
-interface IForm {
-  data: ICredentials;
-  errors: IErrors;
-}
+import { IForm } from "../index";
+import { validateInput } from "../utility";
 
 const SignupForm = (): JSX.Element => {
   const [form, setForm] = useState<IForm>({
@@ -33,74 +20,6 @@ const SignupForm = (): JSX.Element => {
       passwordError: { isPasswordError: false, error: "" },
     },
   });
-
-  const validateInput = (name: string, value: string): void => {
-    const emailRegExp = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    const passwordRegExp =
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
-
-    switch (name) {
-      case "email":
-        if (!emailRegExp.test(value)) {
-          setForm((prev: IForm) => {
-            return {
-              ...prev,
-              errors: {
-                ...prev.errors,
-                emailError: {
-                  isEmailError: true,
-                  error: "Please Enter A Valid Email!",
-                },
-              },
-            };
-          });
-        } else {
-          setForm((prev: IForm) => {
-            return {
-              ...prev,
-              errors: {
-                ...prev.errors,
-                emailError: {
-                  isEmailError: false,
-                  error: "",
-                },
-              },
-            };
-          });
-        }
-        break;
-
-      case "password":
-        if (!passwordRegExp.test(value)) {
-          setForm((prev: IForm) => {
-            return {
-              ...prev,
-              errors: {
-                ...prev.errors,
-                passwordError: {
-                  isPasswordError: true,
-                  error:
-                    "Password Must Have At Least 8 Characters And Include At Least One Number And Captial Letter",
-                },
-              },
-            };
-          });
-        } else {
-          setForm((prev: IForm) => {
-            return {
-              ...prev,
-              errors: {
-                ...prev.errors,
-                passwordError: { isPasswordError: false, error: "" },
-              },
-            };
-          });
-        }
-        break;
-      default:
-        break;
-    }
-  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setForm((prev: IForm) => {
@@ -116,8 +35,8 @@ const SignupForm = (): JSX.Element => {
     const incorrectPassword = form.errors.passwordError.isPasswordError;
 
     event.preventDefault();
-    validateInput("email", form.data.email);
-    validateInput("password", form.data.password);
+    validateInput("email", form.data.email, setForm);
+    validateInput("password", form.data.password, setForm);
     //todo (submit information to database)
     if (!incorrectEmail && !incorrectPassword) {
       // If both incorrectEmail and incorrectPassword are false, then submit the data
