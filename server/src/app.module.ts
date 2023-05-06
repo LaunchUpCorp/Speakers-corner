@@ -5,8 +5,6 @@ import { join } from "path";
 import { HelloModule } from "./hello/hello.module";
 import { AuthModule } from "./auth/auth.module";
 import { UserModule } from "./users/users.module";
-import { JwtModule } from "@nestjs/jwt";
-import { jwtConstants } from "./auth/constants";
 import { ConfigModule } from "@nestjs/config";
 
 @Module({
@@ -23,10 +21,6 @@ import { ConfigModule } from "@nestjs/config";
         outputAs: "class",
       },
       playground: true,
-    }),
-    JwtModule.register({
-      global: true,
-      secret: jwtConstants.secret,
     }),
     HelloModule,
     UserModule,
