@@ -2,7 +2,7 @@ import { Module } from "@nestjs/common";
 import { HelloResolver } from "src/hello/hello.resolver";
 
 @Module({
-    providers: [HelloResolver],
-    exports: [HelloResolver]
+  providers: [HelloResolver],
+  exports: [HelloResolver],
 })
-export class HelloModule { }
+export class HelloModule {}

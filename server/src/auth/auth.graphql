@@ -1,0 +1,16 @@
+input AuthInput {
+  email: String!
+  password: String!
+}
+
+type Auth {
+  accessToken: String!
+}
+
+type Query {
+  signIn(authInput: AuthInput!): Auth
+}
+
+type Mutation {
+  signUp(authInput: AuthInput!): Auth
+}
