@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import icon from "../../assets/images/lock-icon-registration.jpg";
+import icon from "../../../assets/images/lock-icon-registration.jpg";
 
 const SignupHeader = (): JSX.Element => {
   return (

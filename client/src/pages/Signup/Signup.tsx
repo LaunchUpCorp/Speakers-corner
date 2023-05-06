@@ -1,6 +1,6 @@
 import SignupHeader from "./ui/SignupHeader";
 import SignupForm from "./ui/SignupForm";
-import Header from "../components/Header";
+import Header from "../../components/Header";
 
 const Signup = (): JSX.Element => {
   return (
