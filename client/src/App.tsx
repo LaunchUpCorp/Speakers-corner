@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from "./pages/Signup/Signup";
 import Header from "./components/Header";
 import Landing from "./pages/Landing";
 import RoleAssignmentPage from "./pages/RoleAssignmentPage";
@@ -21,6 +22,7 @@ function App() {
             </main>
           }
         />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/role-assignment" element={<RoleAssignmentPage />} />
       </Routes>
     </BrowserRouter>
